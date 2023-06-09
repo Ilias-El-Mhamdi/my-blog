@@ -1,4 +1,4 @@
-const bookReferences = {
+export const bookReferences = {
   cc: { title: 'CLEAN CODE', img: '/covers/clean_code.jpg' },
   cAr: { title: 'CLEAN ARCHITECTURE', img: '/covers/clean_archi.jpg' },
   cAg: { title: 'CLEAN AGILE', img: '/covers/clean_agile.jpg' },
