@@ -19,18 +19,10 @@ const IndexPage = () => (
       <a className='underline hover:text-blue-800' target='_blank'>My LinkedIn Articles</a>
     </Link>
     <br />
-    {/*<div className='flex flex-col h-2'>*/}
-    {/*  <iframe src='/cv.pdf'></iframe>*/}
-    {/*</div>*/}
     <Link href={'/cv.pdf'}>
       <a className='underline hover:text-blue-800' target='_blank'>My CV</a>
     </Link>
 
-    <p>
-      <Link href='/about'>
-        <a>About</a>
-      </Link>
-    </p>
   </Layout>
 );
 
