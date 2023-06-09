@@ -7,7 +7,7 @@ type Props = {
 }
 
 const Layout = ({ children }: Props) => (
-  <div className='p-2'>
+  <div className='m-4'>
     <Head>
       <link rel='icon' href='/hello.png' sizes='any' />
       <title>Ilias El-Mhamdi</title>
