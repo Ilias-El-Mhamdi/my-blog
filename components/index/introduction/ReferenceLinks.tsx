@@ -1,4 +1,4 @@
-import { ALink } from '../atoms/links/ALink';
+import { ALink } from '../../atoms/links/ALink';
 
 export function ReferenceLinks() {
   return <>

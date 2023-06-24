@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { ALink } from '../atoms/links/ALink';
+import { ALink } from '../../atoms/links/ALink';
 
 export const Article = ({ article }) => (
   <ALink isTargetBlank href={article.url}>
