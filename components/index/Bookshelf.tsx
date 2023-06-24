@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { bookReferences, bookShelf } from '../../data/articles';
+import { bookReferences, bookShelf } from './data/articles';
 import { Article } from './Article';
 import { useEffect, useState } from 'react';
 
