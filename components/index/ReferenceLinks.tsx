@@ -1,18 +1,19 @@
-import Link from 'next/link';
+import { ALink } from '../atoms/links/ALink';
 
 export function ReferenceLinks() {
   return <>
-    <Link href='https://jet-afternoon-270.notion.site/Tech-Resources-b060a9b271024bb09aff222e9ccc7abc?pvs=4'>
-      <a className='underline hover:text-blue-800' target='_blank'>Tech Resources</a>
-    </Link>
+    <ALink isTargetBlank
+           href='https://jet-afternoon-270.notion.site/Tech-Resources-b060a9b271024bb09aff222e9ccc7abc?pvs=4'>
+      Tech Resources
+    </ALink>
     {' | '}
-    <Link
-      href='https://www.linkedin.com/today/author/ilias-el-mhamdi-72a013146?trk=article-ssr-frontend-pulse_more-articles'>
-      <a className='underline hover:text-blue-800' target='_blank'>LinkedIn Articles</a>
-    </Link>
+    <ALink isTargetBlank
+           href='https://www.linkedin.com/today/author/ilias-el-mhamdi-72a013146?trk=article-ssr-frontend-pulse_more-articles'>
+      LinkedIn Articles
+    </ALink>
     {' | '}
-    <Link href={'/cv.pdf'}>
-      <a className='underline hover:text-blue-800' target='_blank'>CV</a>
-    </Link>
+    <ALink isTargetBlank href={'/cv.pdf'}>
+      CV
+    </ALink>
   </>;
 }
