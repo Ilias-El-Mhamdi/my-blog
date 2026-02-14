@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Bac from '../bac';
+import Bac from '../../pages/bac';
 
 describe('Bac page', () => {
   it('renders the game component', () => {
