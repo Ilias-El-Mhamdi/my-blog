@@ -4,6 +4,7 @@ import Timer from './Timer';
 import InputForm from './InputForm';
 import ScoreBoard from './ScoreBoard';
 import { selectRandomCards } from '../utils/gameLogic';
+import { validateAnswer } from '../utils/validation';
 
 interface Cards {
   theme: string;
@@ -41,11 +42,7 @@ export default function Game() {
   };
 
   const handleSubmit = (value: string) => {
-    const upperValue = value.toUpperCase();
-    const startsWithLetter = upperValue.startsWith(cards.letter);
-    const containsForbidden = upperValue.includes(cards.forbidden);
-    
-    if (startsWithLetter && !containsForbidden) {
+    if (validateAnswer(value, cards.letter, cards.forbidden)) {
       const newScore = currentScore + 1;
       setCurrentScore(newScore);
       if (newScore > highScore) {
