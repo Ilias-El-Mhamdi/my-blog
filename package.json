@@ -6,10 +6,14 @@
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "framer-motion": "^6.5.1",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
@@ -25,16 +29,23 @@
     "@storybook/manager-webpack5": "^6.5.10",
     "@storybook/react": "^6.5.10",
     "@storybook/testing-library": "^0.0.13",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^12.1.5",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
     "@types/node": "^12.12.21",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^9.8.8",
     "babel-loader": "^8.2.5",
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",
     "eslint-plugin-storybook": "^0.6.4",
-    "postcss": "^8.4.24",
-    "tailwindcss": "^3.3.2",
-    "typescript": "4.0"
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19",
+    "ts-jest": "^29.4.6",
+    "typescript": "4.9"
   }
 }
