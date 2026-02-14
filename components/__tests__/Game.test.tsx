@@ -4,10 +4,12 @@ import Game from '../Game';
 describe('Game', () => {
   beforeEach(() => {
     jest.useFakeTimers();
+    localStorage.clear();
   });
 
   afterEach(() => {
     jest.useRealTimers();
+    localStorage.clear();
   });
 
   it('renders all components', () => {
@@ -51,5 +53,16 @@ describe('Game', () => {
     }
     
     expect(screen.getByText('0')).toBeInTheDocument();
+  });
+
+  it('loads high score from localStorage', () => {
+    localStorage.setItem('bacHighScore', '5');
+    render(<Game />);
+    expect(screen.getByText('High: 5')).toBeInTheDocument();
+  });
+
+  it('starts with zero high score when localStorage is empty', () => {
+    render(<Game />);
+    expect(screen.getByText('High: 0')).toBeInTheDocument();
   });
 });
