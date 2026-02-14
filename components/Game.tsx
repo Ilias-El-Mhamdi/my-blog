@@ -23,6 +23,17 @@ export default function Game() {
     if (stored) setHighScore(parseInt(stored));
   }, []);
 
+  // Timer countdown effect
+  useEffect(() => {
+    if (isPlaying && timeLeft > 0) {
+      const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
+      return () => clearTimeout(timer);
+    }
+    if (timeLeft === 0) {
+      setIsPlaying(false);
+    }
+  }, [isPlaying, timeLeft]);
+
   const nextRound = () => {
     setCards(selectRandomCards());
     setTimeLeft(30);
